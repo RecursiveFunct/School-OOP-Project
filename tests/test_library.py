@@ -10,6 +10,12 @@ A simple way to test is to create instances of your classes, call their
 methods, and check that the output matches what you expect.
 """
 
+import sys
+from pathlib import Path
+
+# Add parent directory to path so we can import from src
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
 from src.book import Book
 from src.dvd import DVD
 from src.magazine import Magazine
